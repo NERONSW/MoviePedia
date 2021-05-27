@@ -2,18 +2,21 @@ import '../Styles/Trending.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import MovieCard from '../Components/MovieCard/MovieCard';
+import PagePagination from '../Components/Pagination/PagePagination';
 
 const Trending = () => {
+	//state which is used for getting movie data
 	const [Moviecontent, setMovieContent] = useState([]);
+
+	//state which is used set page number
+	const [page, setPage] = useState(1);
 
 	//use axios to fetch the data from the API
 	//use asynchronous function since we need to get all the data using the API key
 
 	const getTrendingList = async () => {
-		//state which is used for getting movie data
-
 		const { data } = await axios.get(
-			`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`
+			`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
 		);
 
 		console.log(data);
@@ -28,7 +31,7 @@ const Trending = () => {
 		window.scroll(0, 0);
 
 		// eslint-disable-next-line
-	}, []);
+	}, [page]);
 
 	return (
 		<div>
@@ -51,6 +54,9 @@ const Trending = () => {
 						></MovieCard>
 					))}
 			</div>
+
+			{/* set pages */}
+			<PagePagination setPage={setPage}></PagePagination>
 		</div>
 	);
 };
