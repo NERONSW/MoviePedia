@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 		backgroundColor: '#ccffff',
 		position: 'fixed',
 		width: '100%',
-		height: '10%',
+		height: '8%',
 		bottom: 0,
 		zIndex: 100,
 	},

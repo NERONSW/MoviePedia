@@ -1,4 +1,4 @@
-/* .media {
+.media {
 	display: flex;
 	flex-direction: column;
 	width: 200px;
@@ -19,7 +19,7 @@
 	.media {
 		width: 46%;
 	}
-} */
+}
 
 .card {
 	display: flex;
