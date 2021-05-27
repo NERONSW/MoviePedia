@@ -21,9 +21,14 @@ const useStyles = makeStyles({
 
 export default function Footer() {
 	const classes = useStyles();
+
+	//use value to navigate between pages
 	const [value, setValue] = React.useState(0);
+
+	//use "useHistory" from react routerdom to define the path when we click the icon in the navbar
 	const history = useHistory();
 
+	//Check the value in order to redirect
 	useEffect(() => {
 		if (value === 0) history.push('/');
 		else if (value === 1) history.push('/movies');
