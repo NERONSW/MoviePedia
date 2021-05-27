@@ -14,12 +14,13 @@ const MovieCard = ({ id, poster, title, date, media_type, vote_average }) => {
 				src={poster ? `${img_300}/${poster}` : unavailable}
 				alt={title}
 			></img>
-
+			<br></br>
 			<b className="title">{title}</b>
+			<br></br>
 			<span className="details">
-				{media_type === 'tv' ? 'TV SERIES' : 'MOVIE'}
-				<span className="details">{date}</span>
+				Type : {media_type === 'tv' ? 'TV SERIES' : 'MOVIE'}
 			</span>
+			<span className="details">Aired date : {date}</span>
 		</div>
 	);
 };

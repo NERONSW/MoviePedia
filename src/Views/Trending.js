@@ -5,7 +5,7 @@ import MovieCard from '../Components/MovieCard/MovieCard';
 import PagePagination from '../Components/Pagination/PagePagination';
 
 const Trending = () => {
-	//state which is used for getting movie data
+	//state which is used for getting trending movie and tv series data
 	const [Moviecontent, setMovieContent] = useState([]);
 
 	//state which is used set page number
@@ -20,7 +20,7 @@ const Trending = () => {
 		);
 
 		console.log(data);
-
+		//set retrived data
 		setMovieContent(data.results);
 	};
 
