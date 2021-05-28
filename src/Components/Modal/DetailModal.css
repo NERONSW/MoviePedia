@@ -44,7 +44,7 @@
 .DetailModal__title {
 	text-decoration: underline;
 	height: 12%;
-	font-size: 5vw;
+	font-size: 4vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -55,7 +55,7 @@
 	height: 40%;
 	overflow-y: scroll;
 	padding: 15px;
-	border-radius: 20px;
+	border-radius: 10px;
 	scrollbar-width: thin; /* Firefox */
 	box-shadow: inset 0 0 5px #000000;
 	text-align: justify;
@@ -85,7 +85,7 @@
 		height: 100%;
 	}
 	.DetailModal__title {
-		font-size: 3.5vw;
+		font-size: 2vw;
 	}
 	.DetailModal__description {
 		font-size: 18px;

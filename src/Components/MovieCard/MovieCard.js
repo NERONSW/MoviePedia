@@ -3,15 +3,7 @@ import { img_300, unavailable } from '../../Configs/config';
 import { Badge } from '@material-ui/core';
 import DetailModel from '../Modal/DetailModal';
 
-const MovieCard = ({
-	id,
-	poster,
-	title,
-	date,
-	media_type,
-	vote_average,
-	popularity,
-}) => {
+const MovieCard = ({ id, poster, title, date, media_type, vote_average }) => {
 	return (
 		//wrapping up the movie card using DetailModel
 		//so all the content will be childrens of the DetailModel
@@ -33,7 +25,10 @@ const MovieCard = ({
 				Type : {media_type === 'tv' ? 'TV SERIES' : 'MOVIE'}
 			</span>
 
-			<span className="details">Aired data : {date}</span>
+			{/* <span className="details">Aired data : {date}</span> */}
+			<span className="details" style={{ fontSize: '15px' }}>
+				{media_type === 'tv' ? 'First Aired Data' : 'Released Date'} : {date}
+			</span>
 		</DetailModel>
 	);
 };

@@ -7,13 +7,21 @@ import TVSeries from './Views/TV';
 import SearchBar from './Views/SearchBar';
 import Header from './Components/Header/header';
 import Footer from './Components/Footer/footer';
+import backgroudimg from './images/back.jpg';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Header></Header>
 
-			<div className="App">
+			<div
+				className="App"
+				style={{
+					background: `url(${backgroudimg})`,
+					backgroundSize: 'cover',
+					height: '100%',
+				}}
+			>
 				<Container>
 					<Switch>
 						<Route path="/" component={Trending} exact></Route>
