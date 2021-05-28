@@ -25,8 +25,7 @@ const MovieCard = ({ id, poster, title, date, media_type, vote_average }) => {
 				Type : {media_type === 'tv' ? 'TV SERIES' : 'MOVIE'}
 			</span>
 
-			{/* <span className="details">Aired data : {date}</span> */}
-			<span className="details" style={{ fontSize: '15px' }}>
+			<span className="details" style={{ fontSize: '14px' }}>
 				{media_type === 'tv' ? 'First Aired Data' : 'Released Date'} : {date}
 			</span>
 		</DetailModel>
